@@ -7,20 +7,21 @@ def gen_rand_array
   return array
 end
 
-# practice with the temp method
+# practice with the efficieny method
 
 def bubble(need_sort)
   array = need_sort
+  n = array.length - 1
+  p array
   array.length.times do
     index = 0
-    while index < array.length - 1
+    while index < n
       if array[index] > array[index + 1]
-        temp = array[index]
-        array[index] = array[index + 1]
-        array[index + 1] = temp
+        array[index], array[index + 1] = array[index + 1], array[index]
       end
       index += 1
     end
+    n -= 1
   end
   return array
 end
