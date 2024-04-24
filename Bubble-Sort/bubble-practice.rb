@@ -7,16 +7,17 @@ def gen_rand_array
   return array
 end
 
-def bubble_sort(need_sort)
+# practice with the temp method
+
+def bubble(need_sort)
   array = need_sort
-  change = true
-  while change
-    change = false
+  array.length.times do
     index = 0
-    while index < array.length - 1  # '- 1' makes sure that we stay within the index bounds of array
+    while index < array.length - 1
       if array[index] > array[index + 1]
-        array[index], array[index + 1] = array[index + 1], array[index]
-        change = true
+        temp = array[index]
+        array[index] = array[index + 1]
+        array[index + 1] = temp
       end
       index += 1
     end
@@ -24,4 +25,4 @@ def bubble_sort(need_sort)
   return array
 end
 
-pp bubble_sort([10, 9, 8, 7, 6, 5, 3])
+pp bubble(gen_rand_array)
