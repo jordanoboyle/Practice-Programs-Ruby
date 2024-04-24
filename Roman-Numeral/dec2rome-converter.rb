@@ -61,4 +61,8 @@ def roman_converter(dec_number)
 end    
 
 
-pp roman_converter(7)
+puts "Enter a number between 1-999: "
+user_number = gets.chomp.to_i
+
+pp roman_converter(user_number)
+
