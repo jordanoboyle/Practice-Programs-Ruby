@@ -21,7 +21,14 @@ p "The band #{song1.artist} came out with a song called #{song1.name}. It was ab
 
 # # 2 Write a Rectangle class with attributes and reader/writer methods for width and height. Then write a method that returns the area of the rectangle.
 
-
+class Rectangle
+  attr_reader :width, :height
+  attr_writer :width, :height
+  def initialize (dimensions)
+    @width  = dimensions[:width]
+    @height = dimensions[:height]
+  end
+end
 
 # # 3 Write a Person class with attributes and reader/writer methods for name and age. Then write a method that returns the person's name in all capital letters.
 
