@@ -39,11 +39,21 @@ class Rectangle
 end
 
 rect1 = Rectangle.new({width: 9, height: 5})
-p rect1.width
-p rect1.height
+# p rect1.width
+# p rect1.height
 
-p rect1.area
-p rect1.calc_diagonal
+# p rect1.area
+# p rect1.calc_diagonal
+
+pronic_array = []
+integer_array = Array(1...11)
+index = 0
+while index < integer_array.length - 1
+  pronic_array <<  integer_array[index]*(integer_array[index + 1])
+  index += 1
+end
+
+p pronic_array
 
 # # 3 Write a Person class with attributes and reader/writer methods for name and age. Then write a method that returns the person's name in all capital letters.
 
