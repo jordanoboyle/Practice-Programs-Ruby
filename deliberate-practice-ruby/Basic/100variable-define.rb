@@ -1,10 +1,17 @@
 # Set 1: Writing number and string variables with built-in methods
 
 # # 1 Write a program that uses a variable to store a number, then prints that number plus 10.
+num = 10 
+p 10 + 10
 
 # # 2 Write a program that uses a variable to store a word, then prints that word with all capital letters.
-
+name = "this will be as capital"
+p name.upcase
 # # 3 Write a program that uses variables to store two numbers, then prints the numbers added together.
+number1 = 10
+number2 = 25
+
+p number1 + number2
 
 # # 4 Write a program that uses a variable to store a word, then prints that word in reverse order.
 
