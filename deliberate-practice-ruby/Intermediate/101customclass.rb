@@ -25,10 +25,18 @@ class Rectangle
   attr_reader :width, :height
   attr_writer :width, :height
   def initialize (dimensions)
-    @width  = dimensions[:width]
-    @height = dimensions[:height]
+    @width  = dimensions[:width].to_f
+    @height = dimensions[:height].to_f
+  end
+
+  def area
+
   end
 end
+
+rect1 = Rectangle.new({width: 9, height: 5})
+p rect1.width
+p rect1.height
 
 # # 3 Write a Person class with attributes and reader/writer methods for name and age. Then write a method that returns the person's name in all capital letters.
 
