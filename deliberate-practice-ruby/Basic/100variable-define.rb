@@ -15,11 +15,43 @@ p number1 + number2
 
 # # 4 Write a program that uses a variable to store a word, then prints that word in reverse order.
 
+name2 = "This will be printed in reverse."
+p name2.reverse
+
+# method to reverse by other means. 
+need_to_join = []
+index = -1
+while index >= -name2.length
+  need_to_join << name2.split('')[index]
+  index = index - 1
+end
+
+p need_to_join.join('')
+
+
 # # 5 Write a program that uses a variable to store a number, then prints the number times 10.
+
+print_five_times = "Harley Bear"
+
+puts (print_five_times + " ") * 5
+
+5.times do
+  p print_five_times
+end
 
 # # 6 Write a program that uses variables to store two words, then prints both words on the same line in all capital letters.
 
+item1 = "Rubber Duck"
+item2 = "Pokemon Card"
+
+p "#{item1} and #{item2}".upcase
+
 # # 7 Write a program that uses a variable to store a word, then prints the number of letters in the word.
+
+string1 = "This method actually counts the characters in the string"
+
+p string1
+p string1.length
 
 # # 8 Write a program that uses a variable to store a number with decimals, then prints the number as an integer.
 
