@@ -30,13 +30,20 @@ class Rectangle
   end
 
   def area
-
+    area = (@width * @height)
+  end
+  
+  def calc_diagonal
+    diagonal = (@width**2 + @height**2)**0.5
   end
 end
 
 rect1 = Rectangle.new({width: 9, height: 5})
 p rect1.width
 p rect1.height
+
+p rect1.area
+p rect1.calc_diagonal
 
 # # 3 Write a Person class with attributes and reader/writer methods for name and age. Then write a method that returns the person's name in all capital letters.
 
