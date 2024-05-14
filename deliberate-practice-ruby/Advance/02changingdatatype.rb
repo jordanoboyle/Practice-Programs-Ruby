@@ -111,6 +111,21 @@ p "-------------------"
 
 # 8. Combine data from a hash with names and prices and an array of hashes with names, colors, and weights to make a new hash.
 # For example, {"chair" => 75, "book" => 15} and [{name: "chair", color: "red", weight: 10}, {name: "book", color: "black", weight: 1}] becomes {"chair" => {price: 75, color: "red", weight: 10}, "book" => {price: 15, color: "black", weight: 1}}.
+product_price =  {"chair" => 75, "book" => 15}
+product_info = [{name: "chair", color: "red", weight: 10}, {name: "book", color: "black", weight: 1}]
+description = {}
+
+n = 0
+while n < product_info.length
+  price = product_price.values
+  item  = product_price.keys
+  product_info[n][:price] = price[n]
+  description[item[n]] = product_info[n]
+  n += 1
+end
+p description
+
+
 
 # 9. Convert an array of hashes into a hash of arrays, using the author as keys and the titles as values.
 # For example, [{author: "Jeff Smith", title: "Bone"}, {author: "George Orwell", title: "1984"}, {author: "Jeff Smith", title: "RASL"}] becomes {"Jeff Smith" => ["Bone", "RASL"], "George Orwell" => ["1984"]}.
