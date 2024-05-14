@@ -94,12 +94,19 @@ count_this.each do |string|
   end
 end
 p counted_strings
+p "-------------------"
 
 # 7. Convert a hash into a flat array containing all the hash’s keys and values.
 # For example, {"a" => 1, "b" => 2, "c" => 3, "d" => 4} becomes ["a", 1, "b", 2, "c", 3, "d", 4].
 
 alph_hash = {"a" => 1, "b" => 2, "c" => 3, "d" => 4}
 alph_array = []
+
+for letter, num in alph_hash
+  alph_array.push(letter, num)
+end
+p alph_array
+p "-------------------"
 
 
 # 8. Combine data from a hash with names and prices and an array of hashes with names, colors, and weights to make a new hash.
