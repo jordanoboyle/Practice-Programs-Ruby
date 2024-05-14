@@ -124,11 +124,39 @@ while n < product_info.length
   n += 1
 end
 p description
-
+p "-------------------"
 
 
 # 9. Convert an array of hashes into a hash of arrays, using the author as keys and the titles as values.
 # For example, [{author: "Jeff Smith", title: "Bone"}, {author: "George Orwell", title: "1984"}, {author: "Jeff Smith", title: "RASL"}] becomes {"Jeff Smith" => ["Bone", "RASL"], "George Orwell" => ["1984"]}.
 
+books = [{author: "Jeff Smith", title: "Bone"}, {author: "George Orwell", title: "1984"}, {author: "Jeff Smith", title: "RASL"}]
+
+authors_books = {}
+
+h = 0
+while h < books.length
+  author = books[h][:author]
+  novel  = books[h][:title]
+  if authors_books[author] == nil
+    authors_books[author] = [novel]
+  else
+    authors_books[author] << novel
+  end
+  h += 1
+end
+p authors_books
+
+p "-------------------"
+
 # 10. Given a hash, create a new hash that has the keys and values switched.
 # For example, {"a" => 1, "b" => 2, "c" => 3} becomes {1 => "a", 2 => "b", 3 => "c"}.
+
+letters = {"a" => 1, "b" => 2, "c" => 3}
+numbers = {}
+
+letters.each do |letter, number|
+  numbers[number.to_s] = letter
+end
+
+p numbers
