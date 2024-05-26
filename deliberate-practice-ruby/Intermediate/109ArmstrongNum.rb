@@ -1,0 +1,2 @@
+
+# 5: Armstrong Numbers: Write a program that identifies all Armstrong numbers between 1 and a given positive integer n. An Armstrong number is a number that is equal to the sum of its own digits each raised to the power of the number of digits.
