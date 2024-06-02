@@ -24,8 +24,6 @@ class Playlist
   def shuffle_songs
     shuffled_list = []
     songs = @list
-
-  
     while songs.length > 0
       add = songs[rand(0...songs.length)]
       shuffled_list << add
