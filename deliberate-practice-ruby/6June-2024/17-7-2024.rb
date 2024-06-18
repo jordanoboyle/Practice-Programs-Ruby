@@ -37,3 +37,26 @@ items.each do |item|
 end
 
 p item_details
+
+
+#  Challenge
+# Objective: Given an array of strings representing numbers and other values, filter out non-numeric strings, convert them to integers, and then compute the sum of all integers in the array.
+data = ["1", "2", "3", "four", "5", "six", "7", "eight", "9", "10"]
+integers_one = []
+
+data.each do |element|
+  if element.match(/\A\d+\z/)
+    integers_one << element.to_i
+  end
+end
+
+p integers_one.sum
+
+#other option
+sum = 0
+data.each do |element|
+  if element.match(/\A\d+\z/)
+    sum += element.to_i
+  end
+end
+p "This is the sum using regex #{sum}"
