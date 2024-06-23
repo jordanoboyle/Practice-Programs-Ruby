@@ -51,7 +51,7 @@ p reverse(reverse_this)
 
 def reverse2(num_array)
   reverse_array = []
-  holder = -1
+  holder        = -1
   while holder > -(num_array.length + 1)
     reverse_array << num_array[holder]
     holder -= 1
@@ -62,13 +62,76 @@ p reverse2(reverse_this)
 space()
 
 # 4) Write a function that takes in an array of words and returns the number of words that begin with the letter “a”.
+count_the_as = ["james", "harley", "emails", "alligator"]  # => 1
 
+def find_start_a(word_array)
+  sum_word_with_a = 0
+  word_array.each do |w|
+    if w[0] == "a"
+      sum_word_with_a += 1
+    end
+  end
+  return sum_word_with_a
+end
 
+p find_start_a(count_the_as)
+space()
 # 5) Write a function that takes in an array of strings and joins them together to make a single string separated by commas.
+spaced_by_commas = ["cloud", "noctis", "clive", "tidus"]
+def add_commas(string_array)
+  comma_separated_string = ""
+  string_array.each do |name|
+    unless name.index(string_array[string_array.length-1])
+      comma_separated_string += name + ", "
+    else
+      comma_separated_string += name
+    end
+  end
+  return comma_separated_string
+end
+p add_commas(spaced_by_commas)
+##Notes: this is a clever little solution using the unless. Accomplishes the goal with O(n) notation. Not bad.
+space()
+
 
 # 6) Write a function that takes in an array of numbers and returns the product of all the numbers (each number multiplied by each other).
+get_the_product = [1, 2, 3, 4, 5]
+def product_of(number_array)
+  product = 1
+  for i in number_array
+    product = product * i
+  end
+  return product
+end
+p product_of(get_the_product)
+space()
+#Notes: This is O(n) where our solution doubles with relation to the amount of data in the array
 
 # 7) Write a function that takes in an array of numbers and returns the two smallest numbers.
+numbers_two = [11, 13, 44, 14, 14, 12, 45, -1] # ==> 22, 33
+def two_smallest(number_array)
+  smallest     = number_array[0]
+  second_small = number_array[0]
+  number_array.each do |num|
+    if num == smallest
+      second_small = smallest
+      smallest = num
+    elsif num < smallest
+      second_small = smallest
+      smallest = num
+    elsif num < second_small && num != smallest
+      second_small = num
+    end
+      
+  end
+  return smallest, second_small
+end
+p two_smallest(numbers_two)
+
+
+space()
+
+#Notes: this can be done one of a couple ways, the problem is that you potentially have to use nested loops leading to O(n^2).
 
 # 8) Write a function that takes in an array of numbers and returns a count of how many zeros are in the array.
 
