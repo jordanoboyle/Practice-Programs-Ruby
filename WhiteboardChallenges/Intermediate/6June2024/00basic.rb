@@ -131,9 +131,23 @@ p two_smallest(numbers_two)
 
 space()
 
-#Notes: this can be done one of a couple ways, the problem is that you potentially have to use nested loops leading to O(n^2).
+#Notes: this can be done with nested loops 0(n^2), but with one loop and conditionals we have 0(n)
 
 # 8) Write a function that takes in an array of numbers and returns a count of how many zeros are in the array.
+number_array_two = [0, 3, 4, 6, 2, 0, 0, 3, 5, 6, 8, 0] #==> 4
+def count_zeroes(num_array)
+  zero_count = 0
+  for i in num_array
+    if i == 0
+      zero_count += 1
+    end
+  end
+  return zero_count
+end
+p "answer to question 8"
+p count_zeroes(number_array_two)
+space()
+# Notes: obviously you can do different basic methods here .count, and .select to use an array (use .length).
 
 # 9) Write a function that takes in an array of numbers and returns true if all the numbers are bigger than 10, otherwise returns false.
 numbers_2 = [34, 21, 9, 13, 24, 35]
