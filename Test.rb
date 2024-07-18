@@ -1,3 +1,5 @@
-require "faker"
 
-p Faker::Lorem.paragraph(sentence_count: 4, supplemental: true, random_sentences_to_add: 4)
+20.times do
+  rand_num = rand(1..5)
+  p rand_num
+end
